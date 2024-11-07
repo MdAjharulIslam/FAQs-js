@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+    background: linear-gradient(120deg, #ffe7f3, #ffd7ff, #e8e8ff);
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6rem;
+    transition: background 0.3s;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#theme-toggle.light {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* Accordion Container */
+.accordian {
+    background-color: white;
+    padding: 4px 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(255, 205, 255, 0.4);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.accordian:hover {
+    box-shadow: 2px 2px 12px rgba(255, 105, 180, 0.5);
+}
+
+.accordian.active {
+    background-color: #f8f8ff;
+    border-left: 4px solid #ff69b4;
+}
+
+/* Question Section */
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    margin-left: 16px;
+    transition: transform 0.3s ease;
+}
+
+.icon.active {
+    transform: rotate(-180deg);
+}
+
+/* Answer Section */
+.answer {
+    color: #666;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.answer.active {
+    opacity: 1;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background: linear-gradient(120deg, #333, #444);
+    color: #fff;
+}
+
+body.dark-mode .accordian {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .accordian.active {
+    background-color: #555;
+    border-left: 4px solid #ff69b4;
+}
+
+/* Dark mode styling for answer text */
+body.dark-mode .answer {
+    color: #ff69b4;
+}
+
+body.dark-mode h2 {
+    color: #ff69b4; 
+    
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #ddd;
+    color: #333;
+}
