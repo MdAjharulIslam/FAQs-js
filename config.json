@@ -1,0 +1,22 @@
+{
+    "accordion": {
+      "selector": ".accordian",
+      "iconSelector": ".icon",
+      "answerSelector": ".answer",
+      "animation": {
+        "property": "maxHeight",
+        "toggleClass": "active",
+        "transitionDuration": "300ms"
+      },
+      "accessibility": {
+        "keyEvent": "Enter",
+        "action": "toggle"
+      }
+    },
+    "themeToggle": {
+      "selector": "#theme-toggle",
+      "toggleClass": "dark-mode",
+      "buttonToggleClass": "light"
+    }
+  }
+  
